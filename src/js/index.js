@@ -85,10 +85,11 @@ $(function () {
 });
 
 // フォーム
-document.querySelector('form').addEventListener('submit', handleSubmit);
+document
+  .getElementById('contact-form')
+  .addEventListener('submit', handleSubmit);
 
-const handleSubmit = (e) => {
-  e.stopPropagation();
+function handleSubmit(e) {
   e.preventDefault();
   let myForm = document.getElementById('contact-form');
   let formData = new FormData(myForm);
@@ -99,7 +100,7 @@ const handleSubmit = (e) => {
   })
     .then(() => console.log('Form successfully submitted'))
     .catch((error) => alert(error));
-};
+}
 
 // パーティクル(MV)
 window.particlesJS(
