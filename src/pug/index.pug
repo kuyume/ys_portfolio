@@ -131,13 +131,13 @@ html(lang="ja")
         h4 お見積もりやご相談、ご質問などございましたら
           br
           | こちらのフォームよりご連絡いただけますと幸いです。
-        form(action="")
+        form(action="", method="POST", netlify, data-netlify-recaptcha="true")
           table
             tr
               td お問い合わせの種類
               td
                 .with-arrow
-                  select
+                  select(name="type")
                     option(hidden) 未選択
                     option(value="制作のご相談") 制作のご相談
                     option(value="ご質問") ご質問
@@ -145,28 +145,28 @@ html(lang="ja")
             tr
               td 貴社名
               td
-                input(type="text")
+                input(type="text", name="company")
                 p 例：株式会社○○○○
             tr
               td お名前
               td
-                input(type="text")
+                input(type="text", name="name")
                 p 例：鈴木 太郎
             tr
               td メールアドレス
               td
-                input(type="email")
+                input(type="email", name="email")
                 p 例：example@email.jp
             tr
               td お電話番号
               td
-                input(type="tel")
+                input(type="tel", name="tel")
                 p 例：090-1234-5678
             tr
               td お問い合わせ内容
               td
-                textarea(name="")
-          button(type="submit") ご確認画面へ >>
+                textarea(name="contents")
+          button(type="submit") 送信 >>
       section.introduction#introduction
         h2 私について
         .inner
