@@ -1,0 +1,490 @@
+@import 'reset'
+@import 'theme'
+@import 'mixin'
+@import 'animation'
+
+@media screen and (min-width: 1000px)
+  html
+    font-size: 16px
+  
+@media screen and (max-width: 1000px)
+  html
+    font-size: 1.6vw
+
+h1
+  color: white
+  font-size: 1rem
+  font-weight: 400
+
+h2
+  color: $black
+  font-size: size(32)
+  font-weight: 400
+  text-align: center
+
+h3
+  color: $gray
+  font-size: size(20)
+  line-height: 1.5
+
+h4
+  color: $gray
+  font-size: size(14)
+  font-weight: 400
+  line-height: 1.5
+
+small
+  color: $black
+  font-size: size(14)
+  font-weight: 500
+
+section
+  padding: size(60) 0
+
+body
+  background-color: $beige
+  font-family: $yuGothic
+
+header
+  width: 100%
+  height: 70px
+  background-color: $deepBlue
+  position: fixed
+  z-index: 5
+  margin-top: -70px
+  .inner
+    width: 90%
+    max-width: size(1760)
+    height: 100%
+    +flex()
+    margin: 0 auto
+    h1
+      height: 100%
+      a
+        height: 100%
+        +flex(center, center)
+        color: white
+        font-size: size(24)
+        transition-duration: .4s
+        opacity: 1
+        &:hover
+          transition-duration: .4s
+          opacity: .5
+    nav
+      height: 100%
+      ul
+        height: 100%
+        display: flex
+        li
+          height: 100%
+          a
+            height: 100%
+            +flex(center, center)
+            color: white
+            font-size: size(15)
+            margin: 0 size(20)
+            position: relative
+            &::after
+              content: ''
+              display: block
+              position: absolute
+              bottom: size(15)
+              left: 0
+              background-color: #fff
+              width: 100%
+              height: 2px
+              transform: scaleX(0)
+              opacity: 0
+              transition-duration: .4s
+            &:hover::after
+              transform: scaleX(1)
+              opacity: 1
+              transition-duration: .4s
+          &.contact
+            +flex(center, center)
+            padding: 0
+            height: 60px
+            margin: auto 0
+            &:hover
+              cursor: pointer
+            a
+              height: size(50)
+              background-color: white
+              border: 2px solid white
+              border-radius: size(20)
+              +flex(center, center)
+              color: $deepBlue
+              padding: 0 size(25)
+              transition-duration: .4s
+              &:hover
+                background-color: $deepBlue
+                color: white
+                transition-duration: .4s
+              &::after
+                display: none
+main
+  .mv
+    height: calc(100vh - 70px)
+    position: relative
+    overflow: hidden
+    padding: 0
+    margin-top: 70px
+    h2
+      width: size(1100)
+      +absolute-center()
+      color: rgba(27, 60, 89, 0.6)
+      white-space: pre
+      opacity: 1
+      &#mv-text-2
+        text-align: left
+      &.disappear
+        transition-duration: 2s
+        transition-delay: 1s
+        opacity: 0
+  .skill
+    background-color: $lightBeige
+    > h4
+      text-align: center
+      margin: size(25) 0 size(10)
+    .cards
+      width: 70%
+      max-width: size(700)
+      +flex(center, center)
+      flex-wrap: wrap
+      margin: 0 auto
+      &[data-emergence=visible]
+        article
+          box-shadow: 12px 12px 24px #c7c2bd, -12px -12px 24px #ffffff
+          transition-duration: .5s
+          &:nth-last-of-type(4)
+            transition-delay: .3s
+          &:nth-last-of-type(3)
+            transition-delay: .6s
+          &:nth-last-of-type(2)
+            transition-delay: .9s
+          &:nth-last-of-type(1)
+            transition-delay: 1.2s
+      article
+        width: 40%
+        max-width: size(600)
+        background-color: #EDE7E1
+        box-shadow: none
+        border-radius: size(50)
+        padding: size(35) size(5) size(25)
+        margin: size(25) size(12.5) 0
+        transition-duration: .5s
+          
+        img
+          width: 40%
+          margin: 0 auto
+        h3
+          text-align: center
+          margin: size(25) auto size(15)
+        h4
+          text-align: center
+  .policy
+    > h4
+      text-align: center
+      margin: size(25) 0 size(30)
+    .cards
+      width: 90%
+      max-width: size(1000)
+      margin: size(-30) auto 0
+      article
+        position: relative
+        margin: size(60) 0 0
+        padding-top: 1px
+        &[data-emergence=visible]
+          .card
+            transition-duration: 1s
+            transition-delay: 1s
+            box-shadow: size(5) size(5) size(15) rgba(0, 0, 0, 0.2)
+            &::before
+              width: 0
+              transition-duration: .5s
+              transition-delay: .8s
+            &::after
+              width: 0
+              transition-duration: .5s
+              transition-delay: .5s
+            h3
+              opacity: 1
+              transition-duration: 1.3s
+        img
+          width: auto
+          height: size(300)
+          position: absolute
+        .card
+          width: 70%
+          background-color: white
+          border-radius: size(35)
+          position: relative
+          z-index: 1
+          box-shadow: none
+          padding: size(60) size(30) size(20)
+          margin-top: size(220)
+          margin-left: auto
+          overflow: hidden
+          transition-duration: 1s
+          &::before
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            width: 100%
+            height: 100%
+            background-color: $lightBeige
+            display: block
+            transition-duration: .5s
+          &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: $beige
+            display: block
+            transition-duration: .5s
+          h3
+            position: relative
+            z-index: 2
+            margin-bottom: size(20)
+            top: size(-10)
+            right: 0
+            opacity: 0
+            transition-duration: .5s
+          h4
+            margin-bottom: size(47)
+            span
+              font-size: size(12)
+          p
+            position: absolute
+            top: size(20)
+            right: size(10)
+            color: rgba(229, 216, 204, 0.33)
+            font-size: size(90)
+            font-weight: 400
+            letter-spacing: 0.05em
+            z-index: -1
+            pointer-events: none
+  .technology
+    background-color: $lightBeige
+    padding-bottom: size(350)
+    position: relative
+    h2
+      position: relative
+      z-index: 2
+    h4
+      text-align: center
+      margin: size(25) 0 size(30)
+      position: relative
+      z-index: 2
+      padding-bottom: size(350)
+    h3
+      text-align: center
+      line-height: 1
+      // padding-bottom: size(350)
+      position: relative
+      z-index: 2
+      a
+        background-color: $beige
+        display: inline-block
+        border-radius: size(100)
+        color: $black
+        font-weight: 400
+        padding: size(23) size(24)
+    .bubbles
+      font-size: 0
+      text-align: center
+      position: relative
+      z-index: 2
+      .box
+        width: 100%
+        height: size(700)
+        position: absolute
+        top: size(-350)
+        background-color: $lightBeige
+        mix-blend-mode: multiply
+        z-index: 3
+        pointer-events: none
+      h5
+        width: size(100)
+        height: size(100)
+        background-color: #fff
+        border-radius: size(60)
+        display: inline-block
+        text-align: center
+        font-size: size(14)
+        line-height: size(100)
+        // box-shadow: -20px -10px 50px 5px rgba(0, 0, 0, .5) inset
+      .center
+        +absolute-center()
+        animation: 20s rotate linear infinite
+        h5
+          position: absolute
+          color: white
+          animation: 20s rotate linear infinite reverse
+          &.html
+            background-color: $html
+          &.css
+            background-color: $css
+          &.javascript
+            background-color: $javascript
+        &:hover
+          animation-play-state: paused
+          h5
+            animation-play-state: paused
+      .round
+        +absolute-center()
+        transform-origin: center
+        animation: 60s rotate linear infinite reverse
+        h5
+          color: white
+          position: absolute
+          animation: 60s rotate linear infinite
+          &.babel
+            background-color: $babel
+          &.pug
+            background-color: $pug
+          &.sass
+            background-color: $sass
+          &.eslint
+            background-color: $eslint
+          &.webpack
+            background-color: $webpack
+          &.typescript
+            background-color: $typescript
+          &.postcss
+            background-color: $postcss
+          &.prettier
+            background-color: $prettier
+          &.parcel
+            background-color: $parcel
+          &.react
+            background-color: $react
+          &.vue
+            background-color: $vue
+        &:hover
+          animation-play-state: paused
+          h5
+            animation-play-state: paused
+    canvas
+      position: absolute
+      top: 0
+      z-index: 1
+  .contact
+    h4
+      text-align: center
+      margin: size(30) 0 size(50)
+    form
+      width: 90%
+      max-width: size(1000)
+      background-color: white
+      border-radius: size(15)
+      padding: size(50) size(45)
+      margin: 0 auto
+      table
+        width: 100%
+        border-collapse: collapse
+        tr
+          td:nth-of-type(1)
+            width: size(380)
+            vertical-align: top
+            color: $black
+            font-size: size(18)
+            padding-top: size(30)
+          td
+            position: relative
+            select
+              width: size(200)
+              height: size(50)
+              border: 1px solid $gray
+              border-radius: size(15)
+              color: $black
+              font-size: size(18)
+              padding-left: 1em
+              margin: size(15) 0 size(10)
+            .with-arrow::after
+              content: ''
+              display: block
+              position: absolute
+              top: 50%
+              left: size(170)
+              transform: translateY(-30%)
+              width: 0
+              height: 0
+              border-style: solid
+              border-width: size(10) size(6) 0 size(6)
+              border-color: $black transparent transparent transparent
+              pointer-events: none
+            input
+              width: 100%
+              height: size(50)
+              border: 1px solid $gray
+              border-radius: size(15)
+              color: $black
+              font-size: size(18)
+              padding-left: 1em
+              margin: size(15) 0 size(10)
+            p
+              color: $black
+              font-size: size(16)
+            textarea
+              width: 100%
+              height: size(300)
+              border: 1px solid $gray
+              border-radius: size(20)
+              color: $black
+              font-size: size(18)
+              padding: size(18)
+              margin: size(15) 0 0
+      button
+        background-color: $beige
+        box-shadow: 13px 13px 53px #d6d6d6, -13px -13px 53px #ffffff
+        border: 2px solid $beige
+        border-radius: size(15)
+        color: $black
+        font-size: size(18)
+        font-weight: 500
+        padding: size(15) size(20)
+        margin: size(45) auto 0
+        transition-duration: .2s
+        &:hover
+          transition-duration: .2s
+          background-color: white
+          box-shadow: 0px 0px 0px #d6d6d6, 0px 0px 0px #ffffff
+  .introduction
+    background-color: $lightBeige
+    .inner
+      width: 90%
+      max-width: size(1000)
+      margin: size(50) auto 0
+      +flex()
+      img
+        width: 25%
+      aside
+        width: 70%
+        table
+          width: 100%
+          border-collapse: collapse
+          border-bottom: 1px solid $black
+          tr
+            height: size(50)
+            border-top: 1px solid $black 
+            td
+              vertical-align: middle
+              color: $black
+              font-size: size(16)
+              padding-left: size(12)
+    .message
+      max-width: size(1000)
+      margin: size(50) auto 0
+      h3
+        margin-bottom: size(20)
+      h4
+        line-height: 2
+        font-size: size(15)
+footer
+  text-align: center
+  padding: size(20) 0

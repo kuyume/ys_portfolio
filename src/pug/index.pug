@@ -1,0 +1,214 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Yusaku Shibata Portfolio
+  body#top
+    header#header
+      .inner
+        h1
+          a(href="#top") Yusaku Shibata
+        nav
+          ul
+            li
+              a(data-scroll, href="#skill") できること
+            li
+              a(data-scroll, href="#policy") 制作物へのお約束
+            li
+              a(data-scroll, href="#technology") 技術スタック
+            li
+              a(data-scroll, href="#introduction") 私について
+            li.contact 
+              a(data-scroll, href="#contact") お問い合わせ
+    main
+      section.mv#mv
+        h2#mv-text
+        h2#mv-text-2
+        h2#mv-text-3
+      section.skill#skill
+        h2 できること
+        h4 1から10まで。11を追求し、12を探究します。
+        .cards(data-emergence="hidden")
+          article
+            img(src=require("../images/lp.svg"), alt="LP")
+            h3 LPのコーディング 
+            h4 ちょっとした修正からペライチまで、
+              br
+              | 幅広くご対応させていただきます。
+          article
+            img(src=require("../images/hp.svg"), alt="HP")
+            h3 HPのコーディング 
+            h4 コーポレートサイトやECサイトなど、
+              br
+              | 大規模なサイトもお待ちしております。
+          article
+            img(src=require("../images/seo.svg"), alt="SEO")
+            h3 SEO対策
+            h4 内部SEO対策を前提とし、
+              br
+              | 健全なサイト構築を実現します。
+          article
+            img(src=require("../images/wp.svg"), alt="WordPress")
+            h3 WordPressのカスタマイズ
+            h4 ブログやお問い合わせフォームなど、
+              br
+              | さまざまな機能が実現可能です。
+      section.policy#policy
+        h2 制作物へのお約束
+        h4 コーディングは自由度が高いがゆえに、いろいろな書き方が出来ます。
+          br
+          | しかし、ただ動くサイトを作るわけではない。そこに確固たる意思と意味があります。
+        .cards
+          article(data-emergence="hidden")
+            img(src=require("../images/quality.svg"), alt="quality")
+            .card
+              h3 社内のご担当者様が引き継ぎをしやすいよう、
+                br
+                | コードの品質を常に一定に保ちます。
+              h4 WEBサイトの構築に使われる言語、HTML/CSSやJavaScriptは他の言語に比べて自由度が高くいろいろな書き方が出来る分、混乱を招きがちです。「前担当者のコードがわかりにくく、簡単な修正もひと苦労」といったことにならないよう、W3C勧告に則った書き方やツールによるコード整形など、引き渡し時のコードのクオリティを最優先します。
+              p QUALITY
+          article(data-emergence="hidden")
+            img(src=require("../images/speed.svg"), alt="speed")
+            .card
+              h3 サイトの訪問者にストレスを与えないよう、
+                br
+                | 客観的な基準で表示を高速に、安定化します。
+              h4 サイトの表示速度が1秒遅れると、見る人が10%減る。WEBとはそんな世界です。「インターネット上の名刺」でもあるサイトを一人でも多くの人に届けられるように、Google PageSpeed InsightsやGoogle Lighthouseなどの測定ツールを使い、確実にページの表示速度を高速化します。
+              p SPEED
+          article(data-emergence="hidden")
+            img(src=require("../images/seo2.svg"), alt="seo")
+            .card
+              h3 高水準のSEO対策により、
+                br
+                | ビジネスに活きるサイト作りを徹底します。
+              h4 SEO対策とは、Googleによる自社サイトの評価を改善し検索順位を上げることです。ただ、目的は「良い評価を得ること」ではなく「正しい評価を得ること」です。正しい評価を得るためには「HTMLを推奨された正しい書き方で書く」「サイトマップをGoogleに登録する」といった基礎的なことを確実に行っていくしかありません。基礎を積み重ねることで最前線で戦うビジネスのお手伝いをします。
+              p SEO
+          article(data-emergence="hidden")
+            img(src=require("../images/quick.svg"), alt="quick")
+            .card
+              h3 軽微な修正や変更に即時対応し、
+                br
+                | 小回りのきくサイトに最大限、貢献します。
+              h4 目の前の画面に表示される文字を一つ変えるのに1週間もかかっていては、WEBの良さを活かしきれているとは言えません。プロジェクトに関わる人間として、WEB担当者の一人として、いちエンジニアとして、迅速で確実な対応を行います。
+              p QUICK
+          article(data-emergence="hidden")
+            img(src=require("../images/system.svg"), alt="system")
+            .card
+              h3 お問い合わせフォームやブログ機能など、
+                br
+                | かゆい所に手が届くシステムを構築します。
+              h4 広く大きなWEBの世界では、地球上の人間が便利なツールやコードを公開しています。エンジニアはその一つ一つを精査し、その中で安全で確実なもののみを選択し、正しく運用する義務があります。簡易なシステムにも常に危険が伴うことを理解し、そのリスクを管理することで初めて「役に立つ」と言えるでしょう。
+              p SYSTEM
+      section.technology#technology
+        h2 技術スタック
+        h4 コーディングをはじめとしたフロントエンドの技術は常に進化し続けています。
+          br
+          | 安定して良いサイトをつくり続けるために私が使用している技術をご紹介いたします。
+        //- h3
+        //-   a(href="") エンジニアご担当者様はこちら
+        .bubbles
+          .box
+          .center
+            h5.html HTML
+            h5.css CSS
+            h5.javascript JavaScript
+          .round
+            h5.babel Babel
+            h5.sass Sass
+            h5.pug Pug
+            h5.eslint ESLint
+            h5.webpack webpack
+            h5.typescript TypeScript
+            h5.postcss PostCSS
+            h5.prettier Prettier
+            h5.parcel Parcel
+            h5.react React
+            h5.vue Vue
+      section.contact#contact
+        h2 お問い合わせ
+        h4 お見積もりやご相談、ご質問などございましたら
+          br
+          | こちらのフォームよりご連絡いただけますと幸いです。
+        form(action="")
+          table
+            tr
+              td お問い合わせの種類
+              td
+                .with-arrow
+                  select
+                    option(hidden) 未選択
+                    option(value="制作のご相談") 制作のご相談
+                    option(value="ご質問") ご質問
+                    option(value="その他") その他
+            tr
+              td 貴社名
+              td
+                input(type="text")
+                p 例：株式会社○○○○
+            tr
+              td お名前
+              td
+                input(type="text")
+                p 例：鈴木 太郎
+            tr
+              td メールアドレス
+              td
+                input(type="email")
+                p 例：example@email.jp
+            tr
+              td お電話番号
+              td
+                input(type="tel")
+                p 例：090-1234-5678
+            tr
+              td お問い合わせ内容
+              td
+                textarea(name="")
+          button(type="submit") ご確認画面へ >>
+      section.introduction#introduction
+        h2 私について
+        .inner
+          img(src=require("../images/my-image.png"), alt="my-image")
+          aside
+            table
+              tr
+                td 名前
+                td 柴田裕朔
+              tr
+                td 生まれ
+                td 1998年10月9日  神奈川県 鎌倉市
+              tr
+                td 職業
+                td フロントエンドエンジニア
+              tr
+                td 構築サイト数
+                td 20以上
+        .message
+          h3 変わる技術の中で、変わらないものを
+          h4 大学生の頃、母が病気になった。
+            br
+            | 今まで当たり前だったものが、当たり前じゃなくなる。
+            br
+            | 「バランスよく食べなさい」とガミガミ言われることもなければ、頼んでもいない部屋を勝手に掃除されることもない。
+            br
+            | 朝起きて「おはよう」と言っても返ってこないし、ふとお使いや洗濯を頼んでくる人もいない。
+            br
+            | 一日をのりきって愚痴を言い合う食卓も無くなった。
+            br
+            | 祖母と私が変わっていく中で、父だけは変わらなかった。
+            br
+            | 一番辛いはずの人は、一番毎日を当たり前に、大事に、着実に進んでいた。
+            br
+            | 「毎日の当たり前を当たり前にこなさなければ、家は前に進まない。」
+            br
+            | 社会も同じだ。きっと。
+            br
+            | 感動シーンやサクセスストーリーの裏で、毎日自分がするべきことを確実にこなす。
+            br
+            | ただそれだけのことで、どれだけの人間の日常が支えられているのだろうか。
+            br
+            | 私はそんなエンジニアになりたい。
+    footer
+      small ©︎ 2021 Yusaku Shibata

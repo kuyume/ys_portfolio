@@ -1,0 +1,53 @@
+/*
+    プロジェクト独自のフォントや色を定義するファイルです。
+
+    1.IE対応のため、fontのファイルは、
+        ・woff
+    を用意する
+    ・ttf→サブセット化（サブセット化ソフト）→woff作成（woff化ソフト）
+        例：
+            @font-face
+              font-family: 'SoukouMincho'
+              src: url("../fonts/SoukouMincho.woff") format('woff')
+
+    2.サイトのテーマフォントを設定する（出てくるフォント全部）
+        例：
+            $yuGothic: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif
+
+    3.サイトのテーマ色を設定する（3回以上使われているものを変数にする）
+        例：
+            $black: #242424 */
+
+
+//font-initializing
+
+
+//font-theme
+$yuGothic: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif
+
+
+//color-theme
+$black: #404040
+$gray: #707070
+$deepBlue: #1B3C59
+$beige: #E5D8CC
+$lightBeige: #EDE7E1
+
+$html: #E54D27
+$css: #0974b9
+$javascript: #DAB92C
+$pug: #442823
+$pug-alt: #55342c
+$sass: #C66091
+$babel: #FADD3C
+$parcel: #BE4348
+$parcel-alt: #D9A875
+$prettier: #334650
+$react: #61dbfb
+$vue: #3FBA84
+$vue-alt: #30485E
+$postcss: #DE3A0B
+$typescript: #2E79C7
+$webpack: #8FD7FB
+$webpack-alt: #1479C2
+$eslint: #4632BC
