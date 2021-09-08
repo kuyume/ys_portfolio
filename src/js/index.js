@@ -101,10 +101,11 @@ window.onload = function () {
         'ご用件の選択をお願いいたします。';
       type.parentNode.nextElementSibling.style.color = 'red';
       type.style.borderColor = 'red';
-    } else {
-      type.parentNode.nextElementSibling.textContent = '';
-      type.style.borderColor = '#404040';
     }
+    // else {
+    //   type.parentNode.nextElementSibling.textContent = '';
+    //   type.style.borderColor = '#404040';
+    // }
     if (validator.isEmpty(name.value)) {
       name.nextElementSibling.textContent =
         'お名前の欄は必須となっております。';
