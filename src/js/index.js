@@ -96,12 +96,12 @@ window.onload = function () {
     let name = myForm.elements[2];
     let email = myForm.elements[3];
     let contents = myForm.elements[5];
-    if (validator.equals(type.value, '未選択')) {
-      type.parentNode.nextElementSibling.textContent =
-        'ご用件の選択をお願いいたします。';
-      type.parentNode.nextElementSibling.style.color = 'red';
-      type.style.borderColor = 'red';
-    }
+    // if (validator.equals(type.value, '未選択')) {
+    //   type.parentNode.nextElementSibling.textContent =
+    //     'ご用件の選択をお願いいたします。';
+    //   type.parentNode.nextElementSibling.style.color = 'red';
+    //   type.style.borderColor = 'red';
+    // }
     // else {
     //   type.parentNode.nextElementSibling.textContent = '';
     //   type.style.borderColor = '#404040';
