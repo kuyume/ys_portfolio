@@ -86,7 +86,7 @@ $(function () {
 });
 
 // フォーム
-window.addEventListener('DOMContentLoaded', (event) => {
+window.onload = function () {
   const myForm = document.getElementById('contact-form');
   myForm.addEventListener('submit', handleSubmit);
 
@@ -162,7 +162,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       });
     }
   }
-});
+};
 
 // パーティクル(MV)
 window.particlesJS(
