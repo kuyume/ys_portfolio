@@ -91,10 +91,10 @@ myForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(e) {
   e.preventDefault();
-  let type = myForm.elements[1];
-  let name = myForm.elements[3];
-  let email = myForm.elements[4];
-  let contents = myForm.elements[6];
+  let type = myForm.elements[0];
+  let name = myForm.elements[2];
+  let email = myForm.elements[3];
+  let contents = myForm.elements[5];
   if (validator.equals(type.value, '未選択')) {
     type.parentNode.nextElementSibling.textContent =
       'ご用件の選択をお願いいたします。';
@@ -146,14 +146,18 @@ function handleSubmit(e) {
     !validator.isEmpty(contents.value)
   ) {
     let formData = new FormData(myForm);
-    console.log('success');
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log('Form successfully submitted'))
-      .catch((error) => alert(error));
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: new URLSearchParams(formData).toString(),
+    // }).catch((error) => alert(error));
+    myForm.classList.add('disappear');
+    $('p.thanks').addClass('appear');
+    $('html,body')
+      .delay(1500)
+      .animate({
+        scrollTop: $('#contact').offset().top - 80,
+      });
   } else {
     $('html,body').animate({
       scrollTop: $('#contact-form').offset().top - 80,

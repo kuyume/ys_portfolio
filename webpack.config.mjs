@@ -2,6 +2,8 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageMinimizerWebpackPlugin from 'image-minimizer-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import SitemapWebpackPlugin from 'sitemap-webpack-plugin';
+import RobotstxtPlugin from 'robotstxt-webpack-plugin';
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 export default {
@@ -75,5 +77,17 @@ export default {
       },
     }),
     new MiniCssExtractPlugin(),
+    new SitemapWebpackPlugin.default({
+      base: 'https://ysportfolio.netlify.app/',
+      paths: [
+        {
+          path: '',
+          lastmod: '2021-09-09',
+          priority: 1.0,
+          changefreq: 'monthly',
+        },
+      ],
+    }),
+    new RobotstxtPlugin({}),
   ],
 };

@@ -1,10 +1,8 @@
 <!-- - フォント -->
 
 - SEO 設定
-  - robots.txt
   - URL の正規化
   - MFI
-  - XML サイトマップ
   - google search console
 - レスポンシブ
 - 技術スタック
