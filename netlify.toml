@@ -1,0 +1,29 @@
+[[redirects]]
+  from = "http://ysportfolio.netlify.app/"
+  to = "https://ysportfolio.netlify.app"
+  status = 301
+
+[[redirects]]
+  from = "http://ysportfolio.netlify.app/index.html"
+  to = "https://ysportfolio.netlify.app"
+  status = 301
+
+[[redirects]]
+  from = "http://www.ysportfolio.netlify.app/index.html"
+  to = "https://ysportfolio.netlify.app"
+  status = 301
+
+[[redirects]]
+  from = "https://ysportfolio.netlify.app/"
+  to = "https://ysportfolio.netlify.app"
+  status = 301
+
+[[redirects]]
+  from = "https://ysportfolio.netlify.app/index.html"
+  to = "https://ysportfolio.netlify.app"
+  status = 301
+
+[[redirects]]
+  from = "https://www.ysportfolio.netlify.app/index.html"
+  to = "https://ysportfolio.netlify.app"
+  status = 301
