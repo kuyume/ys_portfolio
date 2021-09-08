@@ -10,7 +10,7 @@
 |       | sass to css      | sass-loader                    | webpack.config.js |
 |       | apply to webpack |                                | webpack.config.js |
 | css   | apply to webpack | css-loader                     | webpack.config.js |
-|       | apply to html    | style-loader                   | webpack.config.js |
+|       | apply to html    | mini-css-extract-plugin        | webpack.config.js |
 |       |                  | sass-loader                    | webpack.config.js |
 |       | postcss          | postcss                        |                   |
 |       | apply to webpack | postcss-loader                 | webpack.config.js |
