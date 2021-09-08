@@ -106,6 +106,7 @@ window.onload = function () {
     //   type.parentNode.nextElementSibling.textContent = '';
     //   type.style.borderColor = '#404040';
     // }
+    console.log(type);
     if (validator.isEmpty(name.value)) {
       name.nextElementSibling.textContent =
         'お名前の欄は必須となっております。';
