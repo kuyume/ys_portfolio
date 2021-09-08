@@ -92,21 +92,19 @@ window.onload = function () {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let type = myForm.elements[0];
-    let name = myForm.elements[2];
-    let email = myForm.elements[3];
-    let contents = myForm.elements[5];
-    // if (validator.equals(type.value, '未選択')) {
-    //   type.parentNode.nextElementSibling.textContent =
-    //     'ご用件の選択をお願いいたします。';
-    //   type.parentNode.nextElementSibling.style.color = 'red';
-    //   type.style.borderColor = 'red';
-    // }
-    // else {
-    //   type.parentNode.nextElementSibling.textContent = '';
-    //   type.style.borderColor = '#404040';
-    // }
-    console.log(type);
+    let type = myForm.elements[1];
+    let name = myForm.elements[3];
+    let email = myForm.elements[4];
+    let contents = myForm.elements[6];
+    if (validator.equals(type.value, '未選択')) {
+      type.parentNode.nextElementSibling.textContent =
+        'ご用件の選択をお願いいたします。';
+      type.parentNode.nextElementSibling.style.color = 'red';
+      type.style.borderColor = 'red';
+    } else {
+      type.parentNode.nextElementSibling.textContent = '';
+      type.style.borderColor = '#404040';
+    }
     if (validator.isEmpty(name.value)) {
       name.nextElementSibling.textContent =
         'お名前の欄は必須となっております。';
