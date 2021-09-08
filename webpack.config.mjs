@@ -1,6 +1,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageMinimizerWebpackPlugin from 'image-minimizer-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 export default {
@@ -41,7 +42,12 @@ export default {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(ico|svg|jpe?g|png|webp)$/,
@@ -68,5 +74,6 @@ export default {
         ],
       },
     }),
+    new MiniCssExtractPlugin(),
   ],
 };

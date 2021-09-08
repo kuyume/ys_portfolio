@@ -392,53 +392,55 @@ main
             width: size(380)
             vertical-align: top
             color: $black
-            font-size: size(18)
+            font-size: size(16)
             padding-top: size(30)
           td
             position: relative
             select
               width: size(200)
-              height: size(50)
+              height: size(45)
               border: 1px solid $gray
               border-radius: size(15)
               color: $black
-              font-size: size(18)
+              font-size: size(16)
               padding-left: 1em
               margin: size(15) 0 size(10)
-            .with-arrow::after
-              content: ''
-              display: block
-              position: absolute
-              top: 50%
-              left: size(170)
-              transform: translateY(-30%)
-              width: 0
-              height: 0
-              border-style: solid
-              border-width: size(10) size(6) 0 size(6)
-              border-color: $black transparent transparent transparent
-              pointer-events: none
+            .with-arrow
+              position: relative
+              &::after
+                content: ''
+                display: block
+                position: absolute
+                top: 50%
+                left: size(170)
+                transform: translateY(-30%)
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: size(10) size(6) 0 size(6)
+                border-color: $black transparent transparent transparent
+                pointer-events: none
             input
               width: 100%
-              height: size(50)
+              height: size(45)
               border: 1px solid $gray
               border-radius: size(15)
               color: $black
-              font-size: size(18)
+              font-size: size(16)
               padding-left: 1em
               margin: size(15) 0 size(10)
             p
               color: $black
-              font-size: size(16)
+              font-size: size(15)
             textarea
               width: 100%
               height: size(300)
               border: 1px solid $gray
               border-radius: size(20)
               color: $black
-              font-size: size(18)
-              padding: size(18)
-              margin: size(15) 0 0
+              font-size: size(16)
+              padding: size(16)
+              margin: size(15) 0 size(10)
       button
         display: block
         background-color: $beige

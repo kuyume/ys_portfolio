@@ -4,6 +4,16 @@ html(lang="ja")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="フロントエンドエンジニア、柴田裕朔のポートフォリオサイトです。安定したコーディングと迅速な対応でお客様のビジネスに貢献いたします。こちらのページでは、制作物に対するお約束や使用している技術、私についてご紹介しております。")
+    meta(property="og:url", content="https://ysportfolio.netlify.app/")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="Yusaku Shibata Portfolio")
+    meta(property="og:description", content="フロントエンドエンジニア、柴田裕朔のポートフォリオサイトです。安定したコーディングと迅速な対応でお客様のビジネスに貢献いたします。こちらのページでは、制作物に対するお約束や使用している技術、私についてご紹介しております。")  
+    meta(property="og:image", content=require("../images/ogp.png"))
+    meta(property="og:site_name", content="Yusaku Shibata Portfolio")
+    meta(property="og:locale", content="ja_JP")
+    meta(name="format-detection", content="email=no,telephone=no,address=no")
+    link(rel="canonical", href="https://ysportfolio.netlify.app/")
     title Yusaku Shibata Portfolio
   body#top
     header#header
@@ -142,6 +152,7 @@ html(lang="ja")
                     option(value="制作のご相談") 制作のご相談
                     option(value="ご質問") ご質問
                     option(value="その他") その他
+                p.error
             tr
               td 貴社名
               td
@@ -152,20 +163,24 @@ html(lang="ja")
               td
                 input(type="text", name="name")
                 p 例：鈴木 太郎
+                p.error
             tr
               td メールアドレス
               td
-                input(type="email", name="email")
+                input(type="text", name="email")
                 p 例：example@email.jp
+                p.error
             tr
               td お電話番号
               td
                 input(type="tel", name="tel")
                 p 例：090-1234-5678
+                p.error
             tr
               td お問い合わせ内容
               td
                 textarea(name="contents")
+                p.error
           div(data-netlify-recaptcha="true")
           button(type="submit") 送信 >>
       section.introduction#introduction
