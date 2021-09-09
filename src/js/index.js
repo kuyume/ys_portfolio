@@ -4,7 +4,10 @@ import emergence from 'emergence.js';
 import SmoothScroll from 'smooth-scroll';
 import { init } from 'ityped';
 import validator from 'validator';
+// import pace from 'pace-js';
 import particlesJS from './modules/particles.min.js';
+
+// pace.start({});
 
 // スクロールアニメーション
 emergence.init({
