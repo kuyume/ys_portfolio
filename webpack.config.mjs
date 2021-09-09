@@ -33,6 +33,7 @@ export default {
                 {
                   useBuiltIns: 'usage',
                   corejs: 3,
+                  modules: false,
                 },
               ],
             ],

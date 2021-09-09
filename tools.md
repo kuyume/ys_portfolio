@@ -5,7 +5,7 @@
 |       |                  |                                | .browserslistrc   |
 |       | apply to webpack | babel-loader                   | webpack.config.js |
 |       | lint             | ====                           |                   |
-|       | polyfill         | ====                           |                   |
+|       | polyfill         | core-js                        | webpack.config.js |
 | sass  | sass             | node-sass                      |                   |
 |       | sass to css      | sass-loader                    | webpack.config.js |
 |       | apply to webpack |                                | webpack.config.js |
