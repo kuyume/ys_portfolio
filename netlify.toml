@@ -52,12 +52,6 @@
   force = true
 
 [[redirects]]
-  from = "https://ysportfolio.netlify.app/"
-  to = "https://ysportfolio.netlify.app"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "https://ysportfolio.netlify.app/index.html"
   to = "https://ysportfolio.netlify.app"
   status = 301
