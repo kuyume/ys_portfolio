@@ -7,7 +7,7 @@
 @media screen and (min-width: 1000px)
   html
     font-size: 16px
-  
+
 @media screen and (max-width: 1000px)
   html
     font-size: 1.6vw
@@ -55,7 +55,7 @@ header
   margin-top: -70px
   .inner
     width: 90%
-    max-width: size(1760)
+    max-width: size(1000)
     height: 100%
     +flex()
     margin: 0 auto
@@ -109,6 +109,7 @@ header
             &:hover
               cursor: pointer
             a
+              margin-right: auto
               height: size(50)
               background-color: white
               border: 2px solid white
@@ -131,13 +132,15 @@ main
     padding: 0
     margin-top: 70px
     h2
-      width: size(1100)
       +absolute-center()
       color: rgba(27, 60, 89, 0.6)
       white-space: pre
       opacity: 1
       &#mv-text-2
         text-align: left
+      &#mv-text-3
+        text-align: left
+        line-height: 1.5
       &.disappear
         transition-duration: 2s
         transition-delay: 1s
@@ -318,7 +321,7 @@ main
         text-align: center
         font-size: size(14)
         line-height: size(100)
-        // box-shadow: -20px -10px 50px 5px rgba(0, 0, 0, .5) inset
+        // box-shadow: -20px -10px 50px 5px rgba(0, 0, 0, .4) inset
       .center
         +absolute-center()
         animation: 20s rotate linear infinite
@@ -503,6 +506,7 @@ main
               font-size: size(16)
               padding-left: size(12)
     .message
+      width: 90%
       max-width: size(1000)
       margin: size(50) auto 0
       h3
@@ -513,3 +517,11 @@ main
 footer
   text-align: center
   padding: size(20) 0
+
+@media screen and (max-width: 1200px)
+  main
+    .mv
+      h2
+        font-size: size(24)
+
+// @media screen and (max-width: 1024px)
