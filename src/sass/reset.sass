@@ -43,12 +43,26 @@ a
 img
   display: block
 
-input[type="text"]
-  padding: 0
-  border: none
+input, button, textarea, select
+  /* デフォルトスタイルをリセット */
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+  /* font-familyを継承しないので、継承させる */
+  font-family: inherit
+
+  /* iOSの角丸をリセット */
   border-radius: 0
-  outline: none
-  background: none
+
+  /* box-size */
+  box-sizing: border-box
+
+  /* 文字の大きさ iOSでズームさせないために16px以上を指定 */
+  font-size: 16px
+
+  /* 文字色を親から継承 */
+  color: inherit
 
 textarea
   -webkit-appearance: none
