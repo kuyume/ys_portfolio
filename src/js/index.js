@@ -97,8 +97,10 @@ const hamBtn = document.getElementById('ham-btn');
 const hamMenu = document.getElementById('ham-menu');
 hamBtn.addEventListener('click', () => {
   if (hamMenu.classList.contains('show')) {
+    hamBtn.classList.remove('show');
     hamMenu.classList.remove('show');
   } else {
+    hamBtn.classList.add('show');
     hamMenu.classList.add('show');
   }
 });
