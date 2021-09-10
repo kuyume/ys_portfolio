@@ -12,6 +12,9 @@
   html
     font-size: 1.6vw
 
+.m-br
+  display: none
+
 h1
   color: white
   font-size: 1rem
@@ -41,6 +44,9 @@ small
 
 section
   padding: size(60) 0
+  > h4
+    text-align: center
+    margin: size(25) 0 size(30)
 
 body
   background-color: $beige
@@ -124,6 +130,8 @@ header
                 transition-duration: .4s
               &::after
                 display: none
+    button
+      display: none
 main
   .mv
     height: calc(100vh - 70px)
@@ -149,7 +157,6 @@ main
     background-color: $lightBeige
     > h4
       text-align: center
-      margin: size(25) 0 size(10)
     .cards
       width: 70%
       max-width: size(700)
@@ -189,7 +196,6 @@ main
   .policy
     > h4
       text-align: center
-      margin: size(25) 0 size(30)
     .cards
       width: 90%
       max-width: size(1000)
@@ -280,8 +286,6 @@ main
       position: relative
       z-index: 2
     h4
-      text-align: center
-      margin: size(25) 0 size(30)
       position: relative
       z-index: 2
       padding-bottom: size(350)
@@ -379,9 +383,6 @@ main
       z-index: 1
   .contact
     position: relative
-    h4
-      text-align: center
-      margin: size(30) 0 size(50)
     form
       width: 90%
       max-width: size(1000)
@@ -524,4 +525,170 @@ footer
       h2
         font-size: size(24)
 
-// @media screen and (max-width: 1024px)
+@media screen and (max-width: 767px)
+  .m-br
+    display: inline
+  h2
+    font-size: size(65)
+  h3
+    font-size: size(50)
+  h4
+    font-size: size(35)
+  section
+    padding: size(150) 0
+    > h4
+      margin: size(40) 0 size(25)
+
+  header
+    .inner
+      h1
+        a
+          font-size: size(50)
+      nav
+        position: absolute
+        width: 100vw
+        height: calc( 100vh - 70px )
+        top: 70px
+        left: 0
+        background-color: $deepBlue
+        visibility: hidden
+        opacity: 0
+        transition: .5s
+        &.show
+          visibility: visible
+          opacity: 1
+          transition: .5s
+        ul
+          flex-direction: column
+          justify-content: center
+          li
+            height: 10vh
+            a
+              font-size: size(40)
+            &.contact
+              height: 10vh
+              margin: 0
+              a
+                height: size(100)
+                margin: 0
+                padding: 0 size(40)
+      button
+        display: block
+        background-color: #fff
+  main
+    .skill
+      .cards
+        width: 95%
+        max-width: initial
+        article
+          width: 75%
+          max-width: initial
+          padding: size(120) size(5) size(55)
+          margin: size(75) size(12.5) 0
+          img
+            width: 40%
+          h3
+            margin: size(60) auto size(20)
+    .policy
+      .cards
+        width: 85%
+        margin: 0 auto
+        article
+          margin: size(120) 0 0
+          img
+            width: 100%
+            height: auto
+            position: relative
+          .card
+            width: 100%
+            margin-top: 0
+            padding: size(120) size(50) size(20)
+            h3
+              margin-bottom: size(40)
+          &:nth-of-type(3)
+            img
+              margin-bottom: size(20)
+    .technology
+      padding-bottom: size(500)
+      h4
+        padding-bottom: size(500)
+      .bubbles
+        h5
+          width: size(150)
+          height: size(150)
+          border-radius: size(150)
+          line-height: size(150)
+        .box
+          height: size(1000)
+          top: size(-500)
+    .contact
+      form
+        width: 85%
+        margin-top: size(100)
+        padding: size(100) size(45)
+        table
+          tr
+            td
+              display: block
+              width: 100%
+              &:nth-of-type(1)
+                font-size: size(40)
+                padding-top: 0
+              select
+                width: size(400)
+                height: size(100)
+                font-size: size(40)
+                margin: size(30) 0 size(20)
+              .with-arrow
+                &::after
+                  left: size(340)
+                  transform: translateY(-30%)
+                  width: 0
+                  height: 0
+                  border-style: solid
+                  border-width: size(18) size(12) 0 size(12)
+              input
+                height: size(100)
+                border-radius: size(15)
+                font-size: size(40)
+                margin: size(30) 0 size(20)
+              p
+                color: $black
+                font-size: size(35)
+                margin-bottom: size(80)
+              textarea
+                height: size(500)
+                font-size: size(40)
+                padding: 1em
+                margin: size(30) 0 size(20)
+        button
+          width: 100%
+          box-shadow: 13px 13px 53px #d6d6d6, -13px -13px 53px #ffffff
+          border-radius: size(15)
+          font-size: size(40)
+          font-weight: 800
+          padding: size(30) size(40)
+          margin: size(10) auto 0
+    .introduction
+      .inner
+        width: 85%
+        flex-direction: column
+        img
+          width: 40%
+          margin: size(40) auto
+        aside
+          width: 100%
+          margin-top: size(60)
+          table
+            tr
+              height: size(140)
+              td
+                font-size: size(40)
+                line-height: 1.5
+                padding-left: size(24)
+      .message
+        width: 85%
+        margin-top: size(120)
+        h4
+          font-size: size(32)
+          margin-top: size(40)

@@ -21,7 +21,7 @@ html(lang="ja")
       .inner
         h1
           a(href="#top") Yusaku Shibata
-        nav
+        nav#ham-menu
           ul
             li
               a(data-scroll, href="#skill") できること
@@ -33,6 +33,7 @@ html(lang="ja")
               a(data-scroll, href="#introduction") 私について
             li.contact 
               a(data-scroll, href="#contact") お問い合わせ
+        button#ham-btn push
     main
       section.mv#mv
         h2#mv-text
@@ -68,16 +69,24 @@ html(lang="ja")
               | さまざまな機能が実現可能です。
       section.policy#policy
         h2 制作物へのお約束
-        h4 コーディングは自由度が高いがゆえに、いろいろな書き方が出来ます。
+        h4 コーディングは自由度が高いがゆえに、
+          br.m-br
+          | いろいろな書き方が出来ます。
           br
-          | しかし、ただ動くサイトを作るわけではない。そこに確固たる意思と意味があります。
+          | しかし、ただ動くサイトを作るわけではない。
+          br.m-br
+          | そこに確固たる意思と意味があります。
         .cards
           article(data-emergence="hidden")
             img(src=require("../images/quality.svg"), alt="quality")
             .card
-              h3 社内のご担当者様が引き継ぎをしやすいよう、
+              h3 社内のご担当者様が引き継ぎを
+                br.m-br
+                | しやすいよう、
                 br
-                | コードの品質を常に一定に保ちます。
+                | コードの品質を常に一定に
+                br.m-br
+                | 保ちます。
               h4 WEBサイトの構築に使われる言語、HTML/CSSやJavaScriptは他の言語に比べて自由度が高くいろいろな書き方が出来る分、混乱を招きがちです。「前担当者のコードがわかりにくく、簡単な修正もひと苦労」といったことにならないよう、W3C勧告に則った書き方やツールによるコード整形など、引き渡し時のコードのクオリティを最優先します。
               p QUALITY
           article(data-emergence="hidden")
@@ -101,22 +110,32 @@ html(lang="ja")
             .card
               h3 軽微な修正や変更に即時対応し、
                 br
-                | 小回りのきくサイトに最大限、貢献します。
+                | 小回りのきくサイトに最大限、
+                br.m-br
+                | 貢献します。
               h4 目の前の画面に表示される文字を一つ変えるのに1週間もかかっていては、WEBの良さを活かしきれているとは言えません。プロジェクトに関わる人間として、WEB担当者の一人として、いちエンジニアとして、迅速で確実な対応を行います。
               p QUICK
           article(data-emergence="hidden")
             img(src=require("../images/system.svg"), alt="system")
             .card
-              h3 お問い合わせフォームやブログ機能など、
+              h3 お問い合わせフォームやブログ
+                br.m-br
+                | 機能など、
                 br
-                | かゆい所に手が届くシステムを構築します。
+                | かゆい所に手が届くシステムを
+                br.m-br
+                | 構築します。
               h4 広く大きなWEBの世界では、地球上の人間が便利なツールやコードを公開しています。エンジニアはその一つ一つを精査し、その中で安全で確実なもののみを選択し、正しく運用する義務があります。簡易なシステムにも常に危険が伴うことを理解し、そのリスクを管理することで初めて「役に立つ」と言えるでしょう。
               p SYSTEM
       section.technology#technology
         h2 技術スタック
-        h4 コーディングをはじめとしたフロントエンドの技術は常に進化し続けています。
+        h4 コーディングをはじめとしたフロントエンドの技術は
+          br.m-br
+          | 常に進化し続けています。
           br
-          | 安定して良いサイトをつくり続けるために私が使用している技術をご紹介いたします。
+          | 安定して良いサイトをつくり続けるために私が使用している
+          br.m-br
+          | 技術をご紹介いたします。
         //- h3
         //-   a(href="") エンジニアご担当者様はこちら
         .bubbles
@@ -198,7 +217,9 @@ html(lang="ja")
                 td 柴田裕朔
               tr
                 td 生まれ
-                td 1998年10月9日  神奈川県 鎌倉市
+                td 1998年10月9日
+                  br.m-br
+                  | 神奈川県 鎌倉市
               tr
                 td 職業
                 td フロントエンドエンジニア
