@@ -2,26 +2,31 @@
   from = "http://www.ysportfolio.netlify.app"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "http://www.ysportfolio.netlify.app/"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "http://www.ysportfolio.netlify.app/index.html"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "http://ysportfolio.netlify.app"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "http://ysportfolio.netlify.app/"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "http://ysportfolio.netlify.app/index.html"
@@ -32,23 +37,28 @@
   from = "https://www.ysportfolio.netlify.app"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "https://www.ysportfolio.netlify.app/"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "https://www.ysportfolio.netlify.app/index.html"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "https://ysportfolio.netlify.app/"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
 
 [[redirects]]
   from = "https://ysportfolio.netlify.app/index.html"
   to = "https://ysportfolio.netlify.app"
   status = 301
+  force = true
