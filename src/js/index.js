@@ -105,5 +105,6 @@ hamBtn.addEventListener('click', () => {
   }
 });
 $('#ham-menu a').on('click', () => {
+  hamBtn.classList.remove('show');
   hamMenu.classList.remove('show');
 });
