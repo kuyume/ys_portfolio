@@ -391,14 +391,20 @@ main
         width: 100%
         border-collapse: collapse
         tr
-          td:nth-of-type(1)
-            width: size(380)
-            vertical-align: top
-            color: $black
-            font-size: size(16)
-            padding-top: size(30)
           td
             position: relative
+            &:nth-of-type(1)
+              width: size(380)
+              vertical-align: top
+              color: $black
+              font-size: size(16)
+              padding-top: size(30)
+              span
+                background: red
+                color: white
+                border-radius: size(10)
+                padding: size(5)
+                margin-left: 10px
             select
               width: size(200)
               height: size(45)
@@ -468,7 +474,8 @@ main
       text-align: center
       line-height: 1.5
       opacity: 0
-      +absolute-center()    
+      +absolute-center()
+      color: $black  
       &.appear
         transition-duration: .5s
         transition-delay: 1.5s
@@ -508,6 +515,21 @@ main
 footer
   text-align: center
   padding: size(20) 0
+#form-modal
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 7
+  background-color: rgba(0, 0, 0, 0.4)
+  color: $black
+  +flex(center, center)
+  table
+    width: 90%
+    max-width: size(1000)
+    height: 50vh
+    background-color: #fff
 
 @media screen and (max-width: 1200px)
   main
@@ -667,6 +689,7 @@ footer
               display: block
               width: 100%
               &:nth-of-type(1)
+                width: 100%
                 font-size: size(40)
                 padding-top: 0
               select

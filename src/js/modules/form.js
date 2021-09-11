@@ -60,14 +60,14 @@ function handleSubmit(e) {
     validator.isEmail(email.value) &&
     !validator.isEmpty(contents.value)
   ) {
-    let formData = new FormData(myForm);
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    }).catch((error) => alert(error));
-    myForm.classList.add('disappear');
-    $('p.thanks').addClass('appear');
+    // let formData = new FormData(myForm);
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: new URLSearchParams(formData).toString(),
+    // }).catch((error) => alert(error));
+    // myForm.classList.add('disappear');
+    // $('p.thanks').addClass('appear');
     $('html,body')
       .delay(1500)
       .animate({

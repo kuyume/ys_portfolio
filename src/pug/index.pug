@@ -16,7 +16,26 @@ html(lang="ja")
     link(rel="canonical", href="https://ysportfolio.netlify.app/")
     title Yusaku Shibata Portfolio
   body#top
-    .progress#progress
+    //- #form-modal
+    //-   table
+    //-     tr
+    //-       td お問い合わせの種類
+    //-       td
+    //-     tr
+    //-       td 貴社名
+    //-       td
+    //-     tr
+    //-       td お名前
+    //-       td
+    //-     tr
+    //-       td メールアドレス
+    //-       td
+    //-     tr
+    //-       td お電話番号
+    //-       td
+    //-     tr
+    //-       td お問い合わせ内容
+    //-       td
     header#header
       .inner
         h1
@@ -69,7 +88,7 @@ html(lang="ja")
             h3 WordPressのカスタマイズ
             h4 ブログやお問い合わせフォームなど、
               br
-              | さまざまな機能が実現可能です。
+              | さまざまな機能が実装可能です。
       section.policy#policy
         h2 制作物へのお約束
         h4 コーディングは自由度が高いがゆえに、
@@ -168,6 +187,7 @@ html(lang="ja")
           table
             tr
               td お問い合わせの種類
+                span 必須
               td
                 .with-arrow
                   select(name="type")
@@ -183,12 +203,14 @@ html(lang="ja")
                 p 例：株式会社○○○○
             tr
               td お名前
+                span 必須
               td
                 input(type="text", name="name")
                 p 例：鈴木 太郎
                 p.error
             tr
               td メールアドレス
+                span 必須
               td
                 input(type="text", name="email")
                 p 例：example@email.jp
@@ -201,6 +223,7 @@ html(lang="ja")
                 p.error
             tr
               td お問い合わせ内容
+                span 必須
               td
                 textarea(name="contents")
                 p.error
