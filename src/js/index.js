@@ -5,6 +5,19 @@ import SmoothScroll from 'smooth-scroll';
 import { init } from 'ityped';
 import 'particles.js';
 import './modules/form.js';
+import Analytics from 'analytics';
+import googleAnalytics from '@analytics/google-analytics';
+
+const analytics = Analytics({
+  app: 'awesome-app',
+  plugins: [
+    googleAnalytics({
+      trackingId: 'G-S8BSCPYMQT',
+    }),
+  ],
+});
+
+analytics.page();
 
 // pace.start({});
 

@@ -69,16 +69,6 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/pug/index.pug',
-      templateParameters: {
-        htmlWebpackPlugin: {
-          tags: {
-            headTags: [
-              '<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8BSCPYMQT"></script>',
-              '<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "G-S8BSCPYMQT");</script>',
-            ],
-          },
-        },
-      },
     }),
     new ImageMinimizerWebpackPlugin({
       minimizerOptions: {
