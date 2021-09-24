@@ -15,27 +15,16 @@ html(lang="ja")
     meta(name="format-detection", content="email=no,telephone=no,address=no")
     link(rel="canonical", href="https://ysportfolio.netlify.app/")
     title Yusaku Shibata Portfolio
+    //- Global site tag (gtag.js) - Google Analytics
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=G-S8BSCPYMQT")
+    script
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S8BSCPYMQT');
+    //- Global site tag (gtag.js) - Google Analytics
   body#top
     //- #form-modal
-    //-   table
-    //-     tr
-    //-       td お問い合わせの種類
-    //-       td
-    //-     tr
-    //-       td 貴社名
-    //-       td
-    //-     tr
-    //-       td お名前
-    //-       td
-    //-     tr
-    //-       td メールアドレス
-    //-       td
-    //-     tr
-    //-       td お電話番号
-    //-       td
-    //-     tr
-    //-       td お問い合わせ内容
-    //-       td
     header#header
       .inner
         h1
