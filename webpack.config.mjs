@@ -69,6 +69,12 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/pug/index.pug',
+      // inject: true,
+      // templateParameters: {
+      //   htmlWebpackPlugin: {
+      //     files: ,
+      //   },
+      // },
     }),
     new ImageMinimizerWebpackPlugin({
       minimizerOptions: {

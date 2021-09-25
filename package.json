@@ -30,8 +30,6 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
-    "@analytics/google-analytics": "^0.5.3",
-    "analytics": "^0.7.14",
     "emergence.js": "^1.1.2",
     "ityped": "^1.0.3",
     "jquery": "^3.6.0",
